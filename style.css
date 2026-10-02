@@ -92,24 +92,6 @@ body {
     margin-bottom: 20px;
 }
 
-.logo-wrapper {
-    position: relative;
-    padding: 6px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #0284c7, #1e3a8a, #0f172a);
-    box-shadow: 0 0 20px rgba(2, 132, 199, 0.5);
-    animation: logoGlow 4s infinite alternate ease-in-out;
-}
-
-.company-logo {
-    width: 85px;
-    height: 85px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    background: #070f1e;
-}
-
 .brand-title {
     font-size: 1.1rem;
     color: var(--accent-blue);
