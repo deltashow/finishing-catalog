@@ -1,42 +1,42 @@
 // رقم الواتساب الرسمي المعتمد
 const WHATSAPP_NUMBER = "201515323171";
 
-// بيانات الباقات تفصيلية مع الصور والمواصفات لكل كارت
+// بيانات الباقات لمنصة وساطة وإدارة التشطيبات
 const finishingPackages = [
     {
         title: "باقة الـ Classic الاقتصادية",
         badge: "الأكثر طلباً",
-        shortDesc: "تشطيبات أساسية بجودة عالية وعملية، مناسبة للوحدات السكنية الاستثمارية.",
+        shortDesc: "نوفر لك أفضل المقاولين لتنفيذ تشطيبات أساسية بجودة عالية وأسعار تنافسية مناسبة للاستثمار.",
         image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&auto=format&fit=crop&q=80",
         features: [
-            "تأسيس كهرباء وسباكة بالكامل بأعلى خامات معتمدة.",
-            "سيراميك أرضيات عالي الجودة لجميع الغرف.",
-            "دهانات أساسية مقاومة للرطوبة والتشققات.",
-            "أبواب خشبية داخلية وتأسيس باب أمني رئيسي."
+            "ترشيح والإشراف على أفضل فرق التنفيذ والعمالة.",
+            "مراجعة المواصفات وخامات الكهرباء والسباكة.",
+            "تسهيل التعاقد وضمان الالتزام بالمقايسات.",
+            "متابعة دورية لسير العمل حتى الاستلام."
         ]
     },
     {
         title: "باقة الـ Premium العصرية",
         badge: "مميز",
-        shortDesc: "تشمل خامات فاخرة، وتفاصيل إضاءة حديثة، وتصميمات دقيقة تناسب المعيشة الراقية.",
+        shortDesc: "نربطك بكبرى شركات الديكور لتنفيذ إضاءات حديثة، جبس بورد، وخامات فاخرة لوحدتك.",
         image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=80",
         features: [
-            "تمديدات إضاءة مخفية (LED Profiles) وديكورات جبس بورد.",
-            "بورسلين فاخر للأرضيات والريسبشن.",
-            "أساسيات حمامات ومطابخ مودرن بخلاطات مستوردة.",
-            "أبواب خشبية مصفحة وأعتاب مرمر طبيعي."
+            "تنسيق كامل مع مصممين وديكورات مودرن.",
+            "استخدام بورسلين وخامات فاخرة ومعتمدة.",
+            "إشراف هندسي على جودة التشطيبات الدقيقة.",
+            "عقود مضمونة وحماية لحقوق العميل بالكامل."
         ]
     },
     {
         title: "باقة الـ Ultra Luxury الفاخرة",
         badge: "حصري",
-        shortDesc: "تصميم هندسي متكامل، خامات مستوردة، وتنفيذ ديكورات خاصة بأعلى معايير الرفاهية.",
+        shortDesc: "إدارة تنفيذ كاملة لأعلى مستويات الفخامة، الخامات المستوردة، والتشطيبات الخاصة.",
         image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&auto=format&fit=crop&q=80",
         features: [
-            "تصميم ديكور 3D هندسي متكامل قبل بدء التنفيذ.",
-            "رخام فاخر وأرضيات خشبية باركيه معالجة.",
-            "أنظمة تحكم ذكية (Smart Home) للإضاءة والأمان.",
-            "واجهات وتفاصيل تشطيب خاصة بأعلى مستوى فخم."
+            "تصميم هندسي متكامل وإشراف نخبة الاستشاريين.",
+            "تنفيذ ديكورات خاصة ورخام عالي الجودة.",
+            "أنظمة منزلية ذكية (Smart Home) معتمدة.",
+            "متابعة استثنائية لجميع مراحل التنفيذ والتسليم."
         ]
     }
 ];
@@ -61,7 +61,7 @@ function renderCatalog() {
                     <h3>${pkg.title}</h3>
                     <p>${pkg.shortDesc}</p>
                 </div>
-                <span style="color: var(--accent-blue); font-size: 0.88rem; font-weight: bold; margin-top: 10px;">استعرض التفاصيل والمعاينة ←</span>
+                <span style="color: var(--accent-blue); font-size: 0.88rem; font-weight: bold; margin-top: 10px;">استعرض تفاصيل الباقة والخدمة ←</span>
             </div>
         `;
 
@@ -74,7 +74,7 @@ function renderCatalog() {
 }
 
 function openModal(pkg) {
-    const whatsappMsg = encodeURIComponent(`السلام عليكم، مهتم بالاستفسار عن تفاصيل وحجز (${pkg.title}) من كتالوج DeltaShow.`);
+    const whatsappMsg = encodeURIComponent(`السلام عليكم، مهتم بالاستفسار عن ترتيب وتوفير (${pkg.title}) لتوجهاتها عبر شركة DeltaShow.`);
     const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMsg}`;
 
     modalBody.innerHTML = `
@@ -83,11 +83,11 @@ function openModal(pkg) {
             <span class="card-badge">${pkg.badge}</span>
             <h2>${pkg.title}</h2>
             <p>${pkg.shortDesc}</p>
-            <h4 style="color: #ffffff; margin-bottom: 10px; font-size: 1.05rem;">📋 تفاصيل ومواصفات الباقة:</h4>
+            <h4 style="color: #ffffff; margin-bottom: 10px; font-size: 1.05rem;">📋 مميزات الخدمة والترشيح الهندسية:</h4>
             <ul class="modal-features">
                 ${pkg.features.map(f => `<li>${f}</li>`).join('')}
             </ul>
-            <a href="${whatsappLink}" target="_blank" class="modal-cta">💬 احجز أو استفسر عن هذه الباقة عبر واتساب</a>
+            <a href="${whatsappLink}" target="_blank" class="modal-cta">💬 تواصل معنا لترتيب ومعاينة هذه الباقة عبر واتساب</a>
         </div>
     `;
     modalOverlay.classList.add('active');
@@ -103,11 +103,11 @@ modalOverlay.addEventListener('click', (e) => {
     }
 });
 
-// تحديث زر التواصل العام في الصفحة الرئيسية للموقع ليعمل بالرقم المباشر
+// تحديث زر التواصل العام في الصفحة الرئيسية للموقع
 document.addEventListener('DOMContentLoaded', () => {
     const generalCtaBtn = document.querySelector('.action-box .cta-btn');
     if (generalCtaBtn) {
-        const generalMsg = encodeURIComponent("السلام عليكم، أود الاستفسار عن خدمات التشطيبات والمعاينة الهندسية من DeltaShow.");
+        const generalMsg = encodeURIComponent("السلام عليكم، أرغب في الاستفسار عن خدمات الوساطة وإدارة وتنظيم التشطيبات من DeltaShow.");
         generalCtaBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${generalMsg}`;
     }
 });
