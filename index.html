@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- الخلفية الهندسية المتحركة الخاصة بشركة DeltaShow -->
+    <!-- الخلفية الهندسية المتحركة -->
     <div class="geometric-bg">
         <div class="geo-shape circle"></div>
         <div class="geo-shape square"></div>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="container">
-        <!-- هيدر اللوجو الاحترافي المتحرك -->
+        <!-- هيدر اللوجو المضيء -->
         <header class="site-header">
             <div class="logo-wrapper">
             </div>
@@ -27,21 +27,29 @@
         </header>
 
         <h1>كتالوج التشطيبات الرقمي</h1>
-        <p class="subtitle">اختر الباقة الهندسية الأنسب لوحدتك.. جودة، دقة، وتصميم عصري</p>
+        <p class="subtitle">اضغط على أي باقة لاستعراض التفاصيل الكاملة والمواصفات الهندسية والصور</p>
 
-        <!-- قسم عرض باقات التشطيبات التفاعلية -->
-        <div class="catalog-grid" id="catalogContainer">
-            <!-- سيتم تعبئة الكروت ديناميكياً بواسطة الجافاسكريبت -->
-        </div>
+        <!-- شبكة الكروت التفاعلية -->
+        <div class="catalog-grid" id="catalogContainer"></div>
 
-        <!-- زر التواصل أو طلب معاينة -->
+        <!-- زر التواصل العام -->
         <div class="action-box">
-            <a href="https://wa.me/01515323172" target="_blank" class="cta-btn">💬 احجز استشارتك أو عاين وحدتك الآن</a>
+            <a href="https://wa.me/01515323171" target="_blank" class="cta-btn">💬 تواصل معنا لتنفيذ وحدتك الخاصة</a>
         </div>
 
         <footer>
             <p>© 2026 DeltaShow. All Rights Reserved.</p>
         </footer>
+    </div>
+
+    <!-- نافذة منبثقة (Modal) لتفاصيل الباقة والصور عند الضغط عليها -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div id="modalBody">
+                <!-- يتم تعبئتها ديناميكياً بواسطة الجافاسكريبت -->
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
